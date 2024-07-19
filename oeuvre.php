@@ -1,11 +1,13 @@
 <?php
-    require 'header.php';
-    require 'bdd.php';
-    $db = connexion();
+    require_once 'header.php';
+    require_once 'bdd.php';
 
     if(empty($_GET['id'])) {
         header('Location: index.php');
+        return;
     }
+
+    $db = connexion();
 
     $req = $db->prepare('SELECT * FROM oeuvres WHERE id = ?');
     $req->execute([intval($_GET['id'])]);
@@ -19,7 +21,7 @@
 ?>
 
 <article id="detail-oeuvre">
-    <div id="img-oeuvre">
+    <div class="img-container-oeuvre">
         <img src="<?= $oeuvre['image'] ?>" alt="<?= $oeuvre['titre'] ?>">
     </div>
     <div id="contenu-oeuvre">

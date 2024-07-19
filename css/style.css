@@ -86,11 +86,11 @@ footer {
     padding: 0 15px;
 }
 
-#img-oeuvre {
+.img-container-oeuvre{
     margin-right: 25px;
 }
 
-#img-oeuvre img {
+.img-container-oeuvre img {
     max-width: 470px;
     margin: auto;
     display: block;
@@ -139,12 +139,12 @@ input[type="submit"] {
         width: 50%;
     }
 
-    #img-oeuvre {
+    .img-container-oeuvre {
         margin-right: 0;
         width: 100%;
     }
 
-    #img-oeuvre img {
+    .img-container-oeuvre img {
         width: 100%;
     }
 
