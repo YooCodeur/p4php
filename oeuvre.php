@@ -13,7 +13,6 @@
     $req->execute([intval($_GET['id'])]);
     $oeuvre = $req->fetch();
 
-
     // Si aucune oeuvre trouvé, on redirige vers la page d'accueil
     if(!$oeuvre) {
         header('Location: index.php');
